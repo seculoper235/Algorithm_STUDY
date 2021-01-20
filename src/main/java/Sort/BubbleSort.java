@@ -7,14 +7,25 @@ package Sort;
 public class BubbleSort {
     // 정렬 메소드
     public static void sort(int[] array) {
-        for (int i=0; i<array.length; i++) {
-            for (int j=0; j<array.length-i-1; j++) {
+        // 중복 비교 방지를 위한 플래그
+        boolean flag = true;
+
+        // flag로 중복 교환 체크
+        // (flag가 그대로 false 이면 교환이 필요없다는 뜻이므로, 정렬을 끝냄)
+        for (int repeat=1; repeat<array.length && flag; repeat++) {
+            // flag 초기화
+            flag = false;
+
+            for (int j=0; j<array.length-repeat; j++) {
                 // 현재와 다음 인덱스 비교
                 if(array[j] > array[j+1]) {
                     // 현재 인덱스 값이 더 크므로, 다음 인덱스와 교환
-                    int temp = array[j];
+                    int temp = array[j+1];
                     array[j+1] = array[j];
-                    array[j+1] = temp;
+                    array[j] = temp;
+
+                    // 교환 값은 true로 하여, 다시 비교하지 않도록 한다
+                    flag = true;
                 }
             }
         }
