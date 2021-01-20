@@ -24,7 +24,7 @@ public class BubbleSort {
                     array[j+1] = array[j];
                     array[j] = temp;
 
-                    // 교환 값은 true로 하여, 다시 비교하지 않도록 한다
+                    // 교환된 값은 true로 하여, 다시 비교하지 않도록 한다
                     flag = true;
                 }
             }
