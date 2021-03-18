@@ -4,9 +4,9 @@ package Sort;
  * 현재 있는 값과 다음 순서의 값을 비교하여, 큰 값을 뒤로 밀어버리는 정렬
  * 시간 복잡도 : O(n^2)이고 가장 단순한 정렬증 하나이다
  */
-public class BubbleSort {
+public class BubbleSort implements AbstractSort {
     // 정렬 메소드
-    public static void sort(int[] array) {
+    public void sort(int[] array) {
         // 중복 비교 방지를 위한 플래그
         boolean flag = true;
 
