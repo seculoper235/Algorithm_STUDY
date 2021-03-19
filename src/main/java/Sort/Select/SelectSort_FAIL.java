@@ -9,7 +9,7 @@ import Sort.AbstractSort;
 */
 public class SelectSort_FAIL implements AbstractSort {
     // 정렬 메소드
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
         int temp;
 
         /* 오류!
@@ -20,6 +20,7 @@ public class SelectSort_FAIL implements AbstractSort {
             array[i] = array[min(array, i)];
             array[min(array, i)] = temp;
         }
+        return array;
     }
 
     // 최소값 구하기

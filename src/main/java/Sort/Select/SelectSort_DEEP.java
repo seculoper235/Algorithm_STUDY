@@ -8,7 +8,7 @@ import Sort.AbstractSort;
  */
 
 public class SelectSort_DEEP implements AbstractSort {
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
         int temp;
         for (int i=0; i< array.length; i++) {
             // 깊은 복사
@@ -21,6 +21,7 @@ public class SelectSort_DEEP implements AbstractSort {
             array[i] = array[min];
             array[min] = temp;
         }
+        return array;
     }
 
     public static int min(int[] array, int start) {

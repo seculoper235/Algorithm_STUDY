@@ -11,7 +11,7 @@ public class TestAlgorithm {
         int[] array = {5, 3, 1, 2, 9, 0, 15, 8, 4};
 
         // 알고리즘 돌려보기
-        runSort(new QuickSort_copy(), array);
+        runSort(new QuickSort(), array);
     }
 
     public static void runSort(AbstractSort Sort, int[] array) {

@@ -2,8 +2,9 @@ package Sort;
 
 public class QuickSort_copy implements AbstractSort {
     @Override
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
         sort(array, 0, array.length-1);
+        return array;
     }
 
     public static int partition(int[] array, int left, int right) {

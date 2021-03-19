@@ -14,11 +14,12 @@ import Sort.AbstractSort;
  */
 
 public class SelectSort implements AbstractSort {
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
 
         for (int i=0; i< array.length; i++) {
             exChange(array, i);
         }
+        return array;
     }
 
     // 배열의 주소값을 넘겨받으므로, 참조가 일어남

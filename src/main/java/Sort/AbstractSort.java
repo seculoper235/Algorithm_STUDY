@@ -1,5 +1,7 @@
 package Sort;
 
 public interface AbstractSort {
-    default void sort(int[] array){}
+    default int[] sort(int[] array){
+        return array;
+    }
 }

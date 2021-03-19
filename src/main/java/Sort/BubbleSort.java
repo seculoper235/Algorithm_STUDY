@@ -6,7 +6,7 @@ package Sort;
  */
 public class BubbleSort implements AbstractSort {
     // 정렬 메소드
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
         // 중복 비교 방지를 위한 플래그
         boolean flag = true;
 
@@ -29,5 +29,6 @@ public class BubbleSort implements AbstractSort {
                 }
             }
         }
+        return array;
     }
 }
